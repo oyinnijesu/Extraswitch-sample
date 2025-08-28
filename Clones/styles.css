@@ -85,4 +85,119 @@ footer {
     bottom: 0;
     width: 100%;
     box-shadow: #FFF;
+
 }
+@media (max-width: 600px) {
+
+ html, body {
+    height: 100%;
+  }
+  body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  main, .container, .login-wrapper {
+    flex: 1 0 auto;
+    width: 100%;
+    padding: 0 8px;
+  }
+
+  .isw-text h1 {
+    font-size: 1.5rem;
+    padding: 36px 12px;   
+    width: auto;          
+    margin-left: 0;
+    margin-right: 0;
+    left: auto;
+    right: auto;
+  }
+
+  
+  .isw-logo img {
+    width: 60px;
+  }
+
+  
+  .isw-button {
+    width: 94%; 
+    max-width: 480px;
+    margin: 12px auto;
+    padding: 12px;
+  }
+
+
+
+  .login-content, .isw-login {
+  
+    padding: 0 12px;
+    margin-bottom: 24px;
+  }
+
+  .isw-button {
+    width: 98%;
+    font-size: 0.95rem;
+    padding: 12px;
+    margin: 12px 0;
+  }
+
+  footer {
+    padding-top: 300px;
+    padding-bottom: 8px;
+    font-size: 12px;
+    text-align: center;
+    background: #fff;
+  }
+}
+
+/* Medium screens: tablets */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .isw-logo img {
+    width: 70px;
+  }
+
+  .isw-text h1 {
+    font-size: 2rem;
+    padding: 60px 15px;
+  }
+
+  .login-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .isw-button {
+    font-size: 1rem;
+    padding: 14px 20px;
+  }
+
+  footer {
+    padding: 40px 20px;
+    font-size: 14px;
+    text-align: center;
+  }
+}
+
+/* Large screens: desktops and up */
+@media (min-width: 1025px) {
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .isw-text h1 {
+    font-size: 2.5rem;
+    padding: 90px 20px;
+  }
+
+  .login-content h2 {
+    font-size: 2rem;
+  }
+
+  footer {
+    font-size: 16px;
+    padding-left: 140px;
+    text-align: left;
+  }
+}
+
