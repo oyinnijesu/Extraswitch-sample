@@ -2,62 +2,91 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Lato', sans-serif;
+    font-family: "Source Sans Pro", sans-serif;
 }
+
+
 
 .header,
 .isw-header,
 .isw-logo {
-    text-align: left;
+    text-align: center;
     padding-left: 0;
     margin-left: 0;
 }
 .isw-logo img {
-    width: 80px;     
+    width: 120px;     
     height: auto;
     display: inline-block;
     margin-left: 0;
 }
 
-.isw-text h1 {
-    font-size: 2.5rem;
-    font-weight: 900;
-    color: white;
-    background-image: url(https://webpay.interswitchng.com/extraswitch/images/smartcard-background.png);
-    background-size: cover;
-    background-position: center;
-    padding: 90px 20px 90px 20px;
-    text-align: center;
-    letter-spacing: .015rem;
-    line-height: 1.5em;
+.isw-login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
-.login-content h2{
-    font-size: 2rem;
-    font-weight: 700;
-    color: #00425f;
-    text-align: center;
-    margin: 20px 0;
-    padding-top: 40px;
-
+form {
+    background: #fff;
+    padding: 30px 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    max-width: 420px; 
+    height: 260.583px;
+    width: 100%;
 }
-.login-content p {
+
+.isw-input-group {
+    margin-bottom: 18px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.isw-input-group input {
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #fff;
+    transition: background-color 0.3s, border-color 0.3s;
+    cursor: text;
+}
+
+.isw-input-group input:not(:placeholder-shown) {
+     background-color: rgb(232, 240, 254);
+    border: 1px solid #ccc;
+}
+
+.isw-input-group input:not(:placeholder-shown):focus {
+    background-color: rgb(232, 240, 254);
+    border: 1.5px solid rgb(0, 184, 222);
+}
+
+.isw-input-group:focus-within {
+     border-radius: 4px;
+    padding: 4px;
+    background: none;
+    outline: none;
+}
+
+.isw-input-group input:focus {
+    border: 1.5px solid rgb(0, 184, 222);
+    outline: none;
+    background: #fff;
+}
+.isw-input-group :placeholder-shown{
+    background-color: #fff;
     font-size: 14px;
-    color: #333;
-    margin: 10px 0;
-    text-align: center;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Source Sans Pro", sans-serif;
 }
-
-.isw-login  {
-    text-align: center;
-    margin: 20px 0;
-    padding-left: 10px;
-    color: #FFF;
-}
-
 .isw-button {
-    background-color:rgb(0,184,222);
+    background-color: rgb(0, 184, 222);
     color: #FFF;
     padding: 10px 20px;
     border-radius: 5px;
@@ -67,137 +96,95 @@
     border: none;
 }
 
-.isw-login a {
-    text-decoration: underline;
-    color: rgb(0,14,222);
-    cursor: pointer;
-
-}
-
-footer {
+.isw-text p {
+    font-size: 14px;ss
+    color: #333;
+    margin: 10px 0;
+    text-align: center;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 16px;
-    padding-left: 140px;
-    padding-top: 70px;
-    background-color:#FFF;
-    color: #aaa;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    box-shadow: #FFF;
-
+    padding-bottom: 30px;
 }
-@media (max-width: 600px) {
-
- html, body {
-    height: 100%;
-  }
-  body {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-  }
-
-  main, .container, .login-wrapper {
-    flex: 1 0 auto;
+.isw-button{
+    background-color: rgb(0,66,95);
+    color: #FFF;
+    padding: 15px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    border: none;
     width: 100%;
-    padding: 0 8px;
-  }
-
-  .isw-text h1 {
-    font-size: 1.5rem;
-    padding: 36px 12px;   
-    width: auto;          
-    margin-left: 0;
-    margin-right: 0;
-    left: auto;
-    right: auto;
-  }
-
-  
-  .isw-logo img {
-    width: 60px;
-  }
-
-  
-  .isw-button {
-    width: 94%; 
-    max-width: 480px;
-    margin: 12px auto;
-    padding: 12px;
-  }
-
-
-
-  .login-content, .isw-login {
-  
-    padding: 0 12px;
-    margin-bottom: 24px;
-  }
-
-  .isw-button {
-    width: 98%;
+}
+.forgot-link{
+    display: block;
+    margin-top: 12px;
+    text-align:center;
+    color:rgb(0,66,95);
+    text-decoration: underline;
     font-size: 0.95rem;
-    padding: 12px;
-    margin: 12px 0;
-  }
-
-  footer {
-    padding-top: 300px;
-    padding-bottom: 8px;
-    font-size: 12px;
-    text-align: center;
-    background: #fff;
-  }
+    font-weight: normal;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+footer {
+    display: flex;
+    margin-top: 12px;
+    color:rgb(0,66,95);
+    font-size: 14px;
+    font-weight: normal;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+.footer-link {
+    color: rgb(0,66,95);
+    text-decoration: underline;
+    font-weight: bold;
+    cursor: pointer;
 }
 
-/* Medium screens: tablets */
-@media (min-width: 601px) and (max-width: 1024px) {
-  .isw-logo img {
-    width: 70px;
+
+@media (max-width: 768px) {
+  body {
+    padding: 1rem;
   }
 
-  .isw-text h1 {
-    font-size: 2rem;
-    padding: 60px 15px;
+  .login-container {
+    width: 90%;
+    padding: 1.5rem;
   }
 
-  .login-content h2 {
+  .login-container h2 {
     font-size: 1.5rem;
   }
-
-  .isw-button {
-    font-size: 1rem;
-    padding: 14px 20px;
-  }
-
-  footer {
-    padding: 40px 20px;
-    font-size: 14px;
-    text-align: center;
-  }
 }
 
-/* Large screens: desktops and up */
-@media (min-width: 1025px) {
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
+/* Mobile Phones (≤ 480px) */
+@media (max-width: 480px) {
+
+    .isw-logo img {
+      width: 150px;
+      height: auto;
+    }
+
+  .login-container {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 0;
+    box-shadow: none;
   }
 
-  .isw-text h1 {
-    font-size: 2.5rem;
-    padding: 90px 20px;
+  .login-container h2 {
+    font-size: 1.2rem;
   }
 
-  .login-content h2 {
-    font-size: 2rem;
-  }
-
-  footer {
-    font-size: 16px;
-    padding-left: 140px;
-    text-align: left;
+  .login-container input,
+  .login-container button {
+    font-size: 0.9rem;
+    padding: 0.7rem;
   }
 }
 
