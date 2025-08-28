@@ -97,7 +97,7 @@ form {
 }
 
 .isw-text p {
-    font-size: 14px;ss
+    font-size: 14px;
     color: #333;
     margin: 10px 0;
     text-align: center;
@@ -145,5 +145,46 @@ footer {
     font-weight: bold;
     cursor: pointer;
 }
+@media (max-width: 768px) {
+  body {
+    padding: 1rem;
+  }
+
+  .login-container {
+    width: 90%;
+    padding: 1.5rem;
+  }
+
+  .login-container h2 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Mobile Phones (≤ 480px) */
+@media (max-width: 480px) {
+
+    .isw-logo img {
+      width: 150px;
+      height: auto;
+    }
+
+  .login-container {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .login-container h2 {
+    font-size: 1.2rem;
+  }
+
+  .login-container input,
+  .login-container button {
+    font-size: 0.9rem;
+    padding: 0.7rem;
+  }
+}
+
 
 
